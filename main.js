@@ -26,8 +26,12 @@ const startCountdown = function(initialTime) {
         timeLeft = initialTime - timePassed;
 
         document.getElementById("countdownTime").innerHTML = formatTime(timeLeft);
+
+        if (timeLeft === 0) {
+            clearInterval(timerInterval);
+        }
     }, 1000);
 }
 
 
-startCountdown(600)
+startCountdown(5)
