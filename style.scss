@@ -47,7 +47,7 @@ h1 {
             padding: 15px;
             border-radius: 30px;
 
-            &:hover { //Also needs to become a class that gets applied when clicking the button.
+            &:hover, &.active { 
                 background-color: c.$highlight-pink;
                 color: c.$text-selected;
             }

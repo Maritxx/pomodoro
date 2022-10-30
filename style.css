@@ -115,7 +115,7 @@ h1 {
   padding: 15px;
   border-radius: 30px;
 }
-.pomodoro-timer__section .stage-buttons__holder button:hover {
+.pomodoro-timer__section .stage-buttons__holder button:hover, .pomodoro-timer__section .stage-buttons__holder button.active {
   background-color: #EC0B43;
   color: #141a31;
 }
