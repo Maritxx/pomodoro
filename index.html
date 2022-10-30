@@ -12,8 +12,33 @@
     </head>
     <body>
         <main>
-            
+            <section class="pomodoro-timer__section">
+                <h1>Pomodoro</h1>
+                <div class="stage-buttons__holder">
+                    <button id="pomodoroButton">Pomodoro</button>
+                    <button id="shortBreakButton">Short break</button>
+                    <button id="longBreakButton">Long break</button>
+                </div>
 
+                <div class="countdown-timer__holder">
+                    <div class="timer__container"> <!--Round container with bg-->
+                        <div class="countdown-bar" id="countdownBar">
+                            <div class="countdown-label__holder">
+                                <span id="countdownTime">00:00</span>
+                                <button id="pauseTimeButton">Pause</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="settings__holder">
+                    <button id="settingsButton">Settings</button>
+                </div>
+            </section>
+            
+            <section class="pomodoro-settings__section"> <!--Will be a pop-up window-->
+
+            </section>
         </main>
     </body>
 </html>
