@@ -40,6 +40,7 @@ figcaption {
 button {
   outline: 0;
   color: inherit;
+  background-color: inherit;
 }
 
 q {
@@ -78,6 +79,85 @@ ol, ul {
   margin: 0 auto;
 }
 
+body {
+  font-family: "Catamaran", "Arial", sans-serif;
+  background-color: #1e2240;
+}
+
 /*Font Styling*/
+h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+/*Pomodoro Timer Section*/
+.pomodoro-timer__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 15px;
+}
+.pomodoro-timer__section .stage-buttons__holder {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: #141a31;
+  padding: 5px;
+  border-radius: 30px;
+}
+.pomodoro-timer__section .stage-buttons__holder button {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #3b4058;
+  padding: 15px;
+  border-radius: 30px;
+}
+.pomodoro-timer__section .stage-buttons__holder button:hover {
+  background-color: #EC0B43;
+  color: #141a31;
+}
+.pomodoro-timer__section .countdown-timer__holder {
+  padding: 15px;
+}
+.pomodoro-timer__section .countdown-timer__holder .timer__container {
+  position: relative;
+  width: 250px;
+  height: 250px;
+}
+.pomodoro-timer__section .countdown-timer__holder .timer__container g {
+  fill: none;
+  stroke: none;
+}
+.pomodoro-timer__section .countdown-timer__holder .timer__container g circle {
+  stroke-width: 10px;
+  stroke: #141a31;
+}
+.pomodoro-timer__section .countdown-timer__holder .timer__container g path {
+  stroke-width: 5px;
+  stroke-linecap: round;
+  stroke: #EC0B43;
+}
+.pomodoro-timer__section .countdown-timer__holder .timer__container .countdown-label__holder {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  color: #FFFFFF;
+}
+.pomodoro-timer__section .countdown-timer__holder .timer__container .countdown-label__holder span {
+  font-size: 3rem;
+  font-weight: 900;
+}
+.pomodoro-timer__section .settings__holder {
+  color: #FFFFFF;
+}
 
 /*# sourceMappingURL=style.css.map */

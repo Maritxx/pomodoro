@@ -9,5 +9,97 @@
     margin: 0 auto;
 }
 
+body {
+    font-family: c.$catamaran;
+    background-color: c.$bg-primary;
+}
+
 
 /*Font Styling*/ 
+h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    text-align: center;
+    color: c.$text-heading;
+}
+
+
+/*Pomodoro Timer Section*/
+.pomodoro-timer__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 15px;
+
+    .stage-buttons__holder {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        background-color: c.$element-primary;
+        padding: 5px;
+        border-radius: 30px;
+
+        button {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: c.$text-default;
+            padding: 15px;
+            border-radius: 30px;
+
+            &:hover { //Also needs to become a class that gets applied when clicking the button.
+                background-color: c.$highlight-pink;
+                color: c.$text-selected;
+            }
+        }
+    }   
+
+    .countdown-timer__holder {
+        padding: 15px;
+
+        .timer__container {
+            position: relative;
+            width: 250px;
+            height: 250px;
+
+            g {
+                fill: none;
+                stroke: none;
+
+                circle {
+                    stroke-width: 10px;
+                    stroke: c.$element-primary;
+                }
+
+                path {
+                    stroke-width: 5px;
+                    stroke-linecap: round;
+                    stroke: c.$highlight-pink;
+                }
+            }
+
+            .countdown-label__holder {
+                position: absolute;
+                width: 250px;
+                height: 250px;
+                top: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 15px;
+                color: c.$text-heading;
+
+                span {
+                    font-size: 3rem;
+                    font-weight: 900;
+                }
+            }
+        }
+    }
+
+    .settings__holder {
+        color: c.$text-heading;
+    }
+}
+
