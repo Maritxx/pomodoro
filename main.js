@@ -26,6 +26,7 @@ const startCountdown = function(initialTime) {
         timeLeft = initialTime - timePassed;
 
         document.getElementById("countdownTime").innerHTML = formatTime(timeLeft);
+        updateTimerCircle(initialTime);
 
         if (timeLeft === 0) {
             clearInterval(timerInterval);
@@ -34,4 +35,16 @@ const startCountdown = function(initialTime) {
 }
 
 
-startCountdown(5)
+//Calculates + sets the animation on the countdown.
+const updateTimerCircle = function(initialTime) {
+    let timeFraction = timeLeft / initialTime;
+    let timeFractionOffset = timeFraction - (1 / initialTime) * (1 - timeFraction);
+
+    const circleDasharray = `${(timeFractionOffset * 283).toFixed(0)} 283`; 
+
+    const remainingTimeCircle = document.getElementById("remainingTime");
+    remainingTimeCircle.setAttribute("stroke-dasharray", circleDasharray);
+ }
+
+
+startCountdown(300)

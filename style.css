@@ -127,18 +127,24 @@ h1 {
   width: 250px;
   height: 250px;
 }
-.pomodoro-timer__section .countdown-timer__holder .timer__container g {
+.pomodoro-timer__section .countdown-timer__holder .timer__container svg {
+  transform: scaleX(-1);
+}
+.pomodoro-timer__section .countdown-timer__holder .timer__container svg g {
   fill: none;
   stroke: none;
 }
-.pomodoro-timer__section .countdown-timer__holder .timer__container g circle {
+.pomodoro-timer__section .countdown-timer__holder .timer__container svg g circle {
   stroke-width: 10px;
   stroke: #141a31;
 }
-.pomodoro-timer__section .countdown-timer__holder .timer__container g path {
+.pomodoro-timer__section .countdown-timer__holder .timer__container svg g path {
   stroke-width: 5px;
   stroke-linecap: round;
   stroke: #EC0B43;
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: 1s linear all;
 }
 .pomodoro-timer__section .countdown-timer__holder .timer__container .countdown-label__holder {
   position: absolute;
